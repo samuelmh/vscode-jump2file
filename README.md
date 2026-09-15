@@ -1,11 +1,14 @@
 # Jump2File
 
-VS Code to jump to a file related to the current one.
-Fully configurable with regular expressions.
+VSCode extension to jump to a file related to the current one.
 
-## Configure relations
+- Fully configurable with regular expressions.
+- Allow creation of destination file if not exists.
+- Fast, light, open-source, no telemetry... It just works.
 
-In `settings.json`, de fine rules in a structure like.
+## Configuration
+
+In `settings.json`, define rules in a structure like.
 
 ```json
 {
@@ -28,9 +31,11 @@ The idea is:
 
 See the examples to understand proposed behaviors.
 
-### Example - Python tests
+### Examples
 
-Utils to work with Python tests:
+Use cases.
+
+### Python src -> tests -> src
 
 - The first rule allows to jump from implementation ('src/' folder) to test files ('test/' folder). If there is no test file, ask the user to create it.
 - The second rule allows to jump from test to implementationfiles. If implementation does not exist, do not create the file.

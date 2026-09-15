@@ -1,0 +1,9 @@
+.gitignore
+.vscode/**
+*.vsix
+doc/**
+media/icon-big.jpg
+node_modules/**
+src/**
+tsconfig.json
+.nvmrc

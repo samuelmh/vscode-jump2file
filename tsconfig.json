@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "nodenext",
+    "lib": ["ES2019"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts"]
+}

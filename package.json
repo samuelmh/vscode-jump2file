@@ -1,0 +1,66 @@
+{
+  "name": "jump2file",
+  "displayName": "Jump2File",
+  "description": "Jump to a related file using configurable regular expressions.",
+  "version": "2026.9.0",
+  "publisher": "SamuelMH",
+  "repository": "https://github.com/samuelmh/vscode-jump2file",
+  "icon": "media/icon.png",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jump2file.jump",
+        "title": "Jump2File: Jump"
+      }
+    ],
+    "configuration": {
+      "title": "Jump2File",
+      "properties": {
+        "jump2file.mappings": {
+          "type": "array",
+          "default": [],
+          "description": "Ordered rules used to find related files.",
+          "items": {
+            "type": "object",
+            "required": [
+              "from",
+              "to"
+            ],
+            "properties": {
+              "from": {
+                "type": "string",
+                "description": "Regular expression matched against the absolute current file path (using / as separator)."
+              },
+              "to": {
+                "type": "string",
+                "description": "Destination template. Named captures use {$name}; numeric captures may use {$1}."
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node --test dist/test/*.test.js",
+    "package": "npm run compile && vsce package",
+    "deploy": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^26",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.2.1",
+    "typescript": "^5.7.2"
+  }
+}
