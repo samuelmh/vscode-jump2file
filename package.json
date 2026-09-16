@@ -24,7 +24,7 @@
     "configuration": {
       "title": "Jump2File",
       "properties": {
-        "jump2file.mappings": {
+        "jump2file.rules": {
           "type": "array",
           "default": [],
           "description": "Ordered rules used to find related files.",
