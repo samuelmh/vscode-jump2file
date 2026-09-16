@@ -41,7 +41,11 @@
               },
               "to": {
                 "type": "string",
-                "description": "Destination template. Named captures use {$name}; numeric captures may use {$1}."
+                "description": "Destination template. Named captures use {$name}."
+              },
+              "create": {
+                "type": "string",
+                "description": "(OPTIONAL) If the file to jump does not exist, create? [yes, no, always]."
               }
             },
             "additionalProperties": false
