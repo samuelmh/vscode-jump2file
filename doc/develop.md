@@ -20,18 +20,20 @@ I like to use calver where, X is the year, Y the month and Z the version of the 
 
 - Manual update: `npm version <X.Y.Z> --no-git-tag-version`
 
-## Package
+## Package - create .vsix (VS code extension)
+
+1. Transpile, minify and package: `npm run package`
+
 
 **NOTE:** what will be ignored in the package is defined in 2 files.
 
 - `.gitignore`: project level.
 - `.vscodeignore`: package level.
 
-How to create the VSIX (VS Code extension)
-
-1. Transpile from TypeScript (`src/`) to JavaScript (`dist/`): `npm run compile`
+**NOTE 2:** utils to debug the process.
 1. Review what will be packaged: `npx vsce ls`
-1. Build the package: `npx vsce package`
+1. Manually build the package: `npx vsce package`
+
 
 ## Deploy
 
