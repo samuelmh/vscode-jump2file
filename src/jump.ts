@@ -47,7 +47,7 @@ export async function jump(): Promise<void> {
             }
             output.appendLine('Regex FAILED');
         } catch (error) {
-            output.appendLine(`Invalid mapping: ${error instanceof Error ? error.message : String(error)}`);
+            output.appendLine(`Invalid rule: ${error instanceof Error ? error.message : String(error)}`);
         }
     }
     if (!pathDestination) {

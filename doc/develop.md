@@ -24,16 +24,15 @@ I like to use calver where, X is the year, Y the month and Z the version of the 
 
 1. Transpile, minify and package: `npm run package`
 
-
 **NOTE:** what will be ignored in the package is defined in 2 files.
 
 - `.gitignore`: project level.
 - `.vscodeignore`: package level.
 
 **NOTE 2:** utils to debug the process.
+
 1. Review what will be packaged: `npx vsce ls`
 1. Manually build the package: `npx vsce package`
-
 
 ## Deploy
 
