@@ -31,18 +31,22 @@ The idea is:
 
 See the examples to understand proposed behaviors.
 
-### Examples
+## Commands
 
-Use cases.
+- **Jump2File: Jump** / `jump2file.jump`: if current opened file matches with regex `from` jump to file defined in the template `to`. If file does not exists... create it?
 
-### Python src -> tests -> src
+## Examples
+
+### Python: src <---> test
+
+Jump from a Python file its test and viceversa.
 
 - The first rule allows to jump from implementation ('src/' folder) to test files ('test/' folder). If there is no test file, ask the user to create it.
 - The second rule allows to jump from test to implementationfiles. If implementation does not exist, do not create the file.
 
 ```json
 {
-  "jump2file.mappings": [
+  "jump2file.rules": [
     {
       "from": "(?<path>.*)/src/(?<folder>.+/)*(?<filename>.+)\\.py$",
       "to": "{$path}/test/{$folder}test_{$filename}.py",
