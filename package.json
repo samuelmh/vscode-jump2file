@@ -2,7 +2,7 @@
   "name": "jump2file",
   "displayName": "Jump2File",
   "description": "Jump to a related file using configurable regular expressions.",
-  "version": "2026.9.1",
+  "version": "2026.9.2",
   "publisher": "SamuelMH",
   "repository": "https://github.com/samuelmh/vscode-jump2file",
   "icon": "media/icon.png",
@@ -51,16 +51,20 @@
     }
   },
   "scripts": {
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "compile": "npm run check-types && node esbuild.js",
+    "check-types": "tsc --noEmit",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "test": "npm run compile && node --test dist/test/*.test.js",
-    "package": "npm run compile && vsce package",
+    "package": "npm run check-types && node esbuild.js --production && vsce package",
     "deploy": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^26",
     "@types/vscode": "^1.85.0",
     "@vscode/vsce": "^3.2.1",
+    "esbuild": "^0.28.2",
     "typescript": "^5.7.2"
   }
 }

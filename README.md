@@ -33,7 +33,7 @@ See the examples to understand proposed behaviors.
 
 ## Commands
 
-- **Jump2File: Jump** / `jump2file.jump`: if current opened file matches with regex `from` jump to file defined in the template `to`. If file does not exists... create it?
+- **Jump2File: Jump** / `jump2file.jump`: if current file matches with regex `from`, jump to file defined in the template `to`. If file does not exists, create it?
 
 ## Examples
 
