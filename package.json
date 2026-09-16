@@ -2,7 +2,7 @@
   "name": "jump2file",
   "displayName": "Jump2File",
   "description": "Jump to a related file using configurable regular expressions.",
-  "version": "2026.9.3",
+  "version": "2026.9.4",
   "publisher": "SamuelMH",
   "repository": "https://github.com/samuelmh/vscode-jump2file",
   "icon": "media/icon.png",
@@ -41,7 +41,11 @@
               },
               "to": {
                 "type": "string",
-                "description": "Destination template. Named captures use {$name}; numeric captures may use {$1}."
+                "description": "Destination template. Named captures use {$name}."
+              },
+              "create": {
+                "type": "string",
+                "description": "(OPTIONAL) If the file to jump does not exist, create? [yes, no, always]."
               }
             },
             "additionalProperties": false
