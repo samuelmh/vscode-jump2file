@@ -2,7 +2,7 @@
   "name": "jump2file",
   "displayName": "Jump2File",
   "description": "Jump to a related file using configurable regular expressions.",
-  "version": "2026.9.2",
+  "version": "2026.9.3",
   "publisher": "SamuelMH",
   "repository": "https://github.com/samuelmh/vscode-jump2file",
   "icon": "media/icon.png",
